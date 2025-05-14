@@ -1,0 +1,44 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Muebleria don Ontiveros</h1>
+        <nav>
+            <a href={% url 'index' %}>Inicio</a>
+            <a href={% url 'productos' %}>Productos</a>
+            <a href={% url 'sucursales' %}>Sucursales</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contenedor2">
+            {% for s in sucursales %} 
+                <article class="tarjetas">
+                    <h2>{{s.descripcion}}</h2>
+                    <article class="contenido">
+                        <p>{{s.direccion}}</p>
+                        <p>{{s.horario}}</p>
+                        <img src="{{s.imagen}}" alt="Imagen de la sucursal">
+                        <p>{{s.telefonos}}</p>
+                    </article>
+
+                </article>
+            {% endfor %}
+        </section>
+    </main>
+        <footer id="pie">
+        <article>
+            <a href="mailto:ajosue450@gmail.com">ajosue450@gmail.com</a>
+            <a href="mailto:ajosue450@gmail.com">ontiveros@gmail.com</a>
+        </article>
+        <p>Pagina creada por Alan y Adrian</p>
+    </footer>
+</body>
+</html>
