@@ -32,12 +32,3 @@ def clientes(request):
     }
     return render(request,'clientes.html', context=datos)
 
-
-# def index(request):
-#     return render(request,'index.html')
-
-# def index(request):
-#     return render(request,'index.html')
-
-# def index(request):
-#     return render(request,'index.html')

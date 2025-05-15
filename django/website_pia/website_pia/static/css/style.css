@@ -26,21 +26,23 @@ header a:hover {
     background-color: #495c76f5;
 }
 
+/* El contenedor que se utiliza para productos para que las tarjetas esten una al lado de otra */
 .contenedor {
     display: flex;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center; 
     margin: 10px 10px 30px 10px;
 }
 
+/* Contenedor que se utiliza para inicio, sucursales y clientes para que las tarjetas esten en cascada */
 .contenedor2 {
     display: grid;
-    flex-wrap: wrap;
     justify-content: center; 
+    align-items: center;
     margin: 10px 10px 30px 10px;
 }
 
+/* Se utiliza en productos y sucursales, se da apariencia de tarjetas un pooco cuadradas */
 .tarjetas {
     background-color: aliceblue;
     width: 450px;
@@ -65,16 +67,7 @@ header a:hover {
     text-align: justify;
 }
 
-.tarjetas h2 {
-    margin: 0px;
-    padding: 3px;
-    background-color: rgb(146, 174, 199);
-}
-
-.tarjetas:hover {
-
-}
-
+/* Se usa en inicio para tarjetas un poco más alargadas */
 .tarjetas-2 {
     background-color: aliceblue;
     width: 700px;
@@ -86,14 +79,41 @@ header a:hover {
     border: .5px black solid;
 }
 
-.tarjetas-2 h1{
+.tarjetas h2, .tarjetas-2 h1, .tarjetas-cliente h2 {
     margin: 0px;
-    padding: 4px;
+    padding: 3px;
+    text-align: center;
     background-color: rgb(146, 174, 199);
+    color: rgb(0, 0, 0);
 }
 
 .tarjetas-2 p {
     margin: 8px;
+}
+
+/* Se usa para clientes y hacer tarjetas alargadas en las que el logo aparezca en la parte derecha */
+.tarjetas-cliente {
+    width: 1000px;
+    border: 1px black solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.tarjetas-cliente .contenido {
+    background-color: aliceblue;
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+}
+
+.tarjetas-cliente .contenido img {
+    align-items: center;
+    width: 300px;
+}
+
+.tarjetas-cliente .texto {
+    width: 70%;
 }
 
 #pie {

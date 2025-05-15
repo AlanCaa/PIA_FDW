@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{%static 'css/style.css'%}">
-    <title>Inicio</title>
+    <title>Clientes</title>
 </head>
 <body>
     <header>
-        <h1>Muebleria don Ontiveros</h1>
+        <h1>Empresas con las que trabajamos</h1>
         <nav>
             <a href={% url 'index' %}>Inicio</a>
             <a href={% url 'productos' %}>Productos</a>
@@ -20,16 +20,21 @@
     </header>
     
     <main>
-        <section class="contenedor">
+        <section class="contenedor2">
             {% for c in clientes %} 
-                <article class="tarjetas">
+                <article class="tarjetas-cliente">
                     <h2>{{c.nombre}}</h2>
-                    <article class="contenido">
-                        <p>Teléfono: {{c.telefono}}</p>
-                        <p>Dirección: {{c.direccion}}</p>
-                        <p>Descripción: {{c.descripcion}}</p>
-                        <img src="{{c.logo}}" alt="Logo del cliente">
-                    </article>
+                    <section class="contenido">
+                        <article class="texto">
+                            <p>{{c.descripcion}}</p>
+                            <p>Teléfono: {{c.telefono}}</p>
+                            <p>Dirección: {{c.direccion}}</p>
+                        </article>
+                        <article>
+                            <img src="{{c.logo}}" alt="Logo del cliente">
+                        </article>
+
+                    </section>
                 </article>
             {% endfor %}
         </section>
