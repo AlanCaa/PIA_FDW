@@ -9,7 +9,6 @@
 </head>
 <body>
     <header>
-        <h1>Empresas con las que trabajamos</h1>
         <nav>
             <a href={% url 'index' %}>Inicio</a>
             <a href={% url 'productos' %}>Productos</a>
@@ -20,6 +19,14 @@
     </header>
     
     <main>
+         <section class="hero">
+            <div class="hero-content">
+                <h1>Clientes</h1>
+                <h2>Muebleria don Ontiveros</h2>
+                <p>Empresas con las que trabajamos</p>
+            </div>
+        </section>
+
         <section class="contenedor2">
             {% for c in clientes %} 
                 <article class="tarjetas-cliente">
