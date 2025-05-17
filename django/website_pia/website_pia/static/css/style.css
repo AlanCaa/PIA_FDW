@@ -202,3 +202,87 @@ header a:hover {
 #pie p {
     width: 300px;
 }
+
+/*Se usa para la páginqa contacto, 2 bloques separados pero alineados verticalmente*/
+.contenedor3 {
+    margin: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    align-items: start;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.caja {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #EBE5C2;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caja.text {
+    font-size: 1.1rem; 
+    color: #333; 
+    line-height: 1.8; 
+    text-align: left;
+}
+
+.caja.form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.caja.form form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.caja.form form input,
+.caja.form form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.caja.form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.caja.form form button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #504B38;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.caja.form form button:hover {
+    background: #504B38;
+}
+
+
+.prueba {
+    padding: 30px;
+    background-color: #EBE5C2;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 40px auto; 
+    max-width: 95%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+}

@@ -1,11 +1,59 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
     <title>Contacto</title>
 </head>
 <body>
-    <h1>Holaa</h1>
+    <header>
+        <nav>
+            <a href={% url 'index' %}>Inicio</a>
+            <a href={% url 'productos' %}>Productos</a>
+            <a href={% url 'sucursales' %}>Sucursales</a>
+            <a href={% url 'empleado' %}>Empleados</a>
+            <a href={% url 'clientes' %}>Clientes</a>
+            <a href={% url 'contacto' %}>Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Comunícate con nosostros</h1>
+                <h2>Responderemos todas tus dudas y sugerencias.</h2>
+            </div>
+        </section>
+
+        <section class="contenedor3">
+            <article class="caja text">
+                <p>Si quieres información sobre cualquiera de nuestros productos, rellena nuestro formulario y nos pondremos en contacto contigo lo antes posible</p>
+            </article>
+            <div class="caja form">
+                <form action="#" method="post">
+                    <h2>Contáctanos</h2>
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[\d\s()+-]{7,15}" placeholder="ej. +52 55 1234 5678" required>
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        
+
+    </main>
 </body>
 </html>
