@@ -156,6 +156,13 @@ header a:hover {
     color: rgb(0, 0, 0);
 }
 
+.contenedor-cliente {
+    display: grid;
+    justify-content: center; 
+    align-items: center;
+    margin: 10px 10px 30px 10px;
+}
+
 /* Se usa para clientes y hacer tarjetas alargadas en las que el logo aparezca en la parte derecha */
 .tarjetas-cliente {
     width: 1000px;
@@ -184,34 +191,32 @@ header a:hover {
 #pie {
     margin: 20px 0px 0px 0px;
     background-color: #504B38;
-    padding: 1.2%;
+    padding: 1%;
     color: white;
-
+    align-content: center;
 }
 
 #pie article{
     float: right;
-    margin: 20px 5px 5px 5px;
-}
-
-#pie a {
-    transition: color 0.3s ease;
-    color: white;
 }
 
 #pie p {
     width: 300px;
 }
+#pie h4, #pie p {
+    margin-left: 20px;
+}
 
 /*Se usa para la páginqa contacto, 2 bloques separados pero alineados verticalmente*/
 .contenedor3 {
-    margin: 0 5%;
+    margin: 2% 2%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     align-items: start;
     min-height: 100vh;
-    padding: 20px 0;
+    padding: 5px 0;
+    margin-bottom: 0px;
 }
 
 .caja {
