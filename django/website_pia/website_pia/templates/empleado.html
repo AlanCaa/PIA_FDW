@@ -26,12 +26,22 @@
             </div>
         </section>
 
-        <section class="contenedor2">
-            <article class="tarjetas-2">
-            </article>
+        <section class="contenedor">
+            {% for e in empleado %}  
+                <article class="tarjetas">
+                    <h2>{{ e.nombre }}</h2>
+                    <article class="contenido">
+                        <p>Teléfono: {{ e.telefono }}</p>
+                        <p>Departamento: {{ e.departamento }}</p>
+                        <p>Proyectos: {{ e.proyectos }}</p>
+                        <p>Antigüedad: {{ e.antiguedad }}</p>
+                    </article>
+                </article>
+            {% endfor %}
         </section>
     </main>
-        <footer id="pie">
+
+    <footer id="pie">
         <article>
             <a href="mailto:ajosue450@gmail.com">ajosue450@gmail.com</a>
             <a href="mailto:ajosue450@gmail.com">ontiveros@gmail.com</a>

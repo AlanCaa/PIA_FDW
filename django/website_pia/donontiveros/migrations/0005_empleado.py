@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('telefono', models.CharField(max_length=10)),
                 ('departamento', models.CharField(max_length=20)),
                 ('proyectos', models.CharField(max_length=25)),
-                ('antiguedad', models.CharField(max_length=4)),
+                ('antiguedad', models.CharField(max_length=6)),
             ],
         ),
     ]
