@@ -1,0 +1,24 @@
+# Entornos virtuales
+env/
+venv/
+.venv/
+ambientepia/
+
+# Archivos de Python
+*.pyc
+__pycache__/
+
+# Base de datos (si no se comparte entre el equipo)
+
+
+# Archivos de configuración local
+*.env
+*.local
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+.idea/
