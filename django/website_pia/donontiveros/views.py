@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Producto, Sucursal, Empleado, Cliente
+from .models import Producto, Sucursal, Empleado, Cliente, Contacto
 # Create your views here.
 def index(request):
     return render(request,'index.html')
@@ -11,11 +11,23 @@ def productos(request):
     return render(request, "productos.html", context=datos)
 
 def empleado(request):
+    #sucursal_id = request.GET.get('sucursal')
+    try:
+        sucursal_id = int(request.GET.get('sucursal')) if request.GET.get('sucursal') else None
+    except ValueError:
+        sucursal_id = None
+    
+    empleados = Empleado.objects.all()
+
+    if sucursal_id:
+        empleados = empleados.filter(sucursal_id=sucursal_id)
+
     datos = {
-        'empleado': Empleado.objects.all()
+        'empleado': empleados,
+        'sucursales': Sucursal.objects.all(),
+        'sucursal_seleccionada': sucursal_id
     }
     return render(request, "empleado.html", context=datos)
-
 
 def sucursales(request):
     datos = {
@@ -31,4 +43,10 @@ def clientes(request):
         'clientes': Cliente.objects.all()
     }
     return render(request,'clientes.html', context=datos)
+
+def contacto(request):
+    datos = {
+        'contacto': Contacto.objects.all()
+    }
+    return render(request,'contacto.html', context=datos)
 

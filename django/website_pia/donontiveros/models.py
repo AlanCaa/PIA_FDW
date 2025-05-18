@@ -25,6 +25,7 @@ class Empleado(models.Model):
     departamento = models.CharField(max_length=20)
     proyectos = models.CharField(max_length=25)
     antiguedad = models.CharField(max_length=6)
+    sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE, null=True, blank=True)
     def __str__(self):
         return self.nombre
     
@@ -34,5 +35,13 @@ class Cliente(models.Model):
     direccion = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=160)
     logo = models.CharField(max_length=200)
+    def __str__(self):
+        return self.nombre
+
+class Contacto(models.Model):
+    nombre = models.CharField(max_length=50, null=True, blank=True)
+    telefono = models.CharField(max_length=50, null=True, blank=True)
+    correo = models.CharField(max_length=50, null=True, blank=True)
+    mensaje = models.CharField(max_length=50, null=True, blank=True)
     def __str__(self):
         return self.nombre

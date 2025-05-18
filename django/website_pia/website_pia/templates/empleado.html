@@ -18,9 +18,9 @@
             <a href={% url 'contacto' %}>Contacto</a>
         </nav>
     </header>
-    
+
     <main>
-         <section class="hero">
+        <section class="hero">
             <div class="hero-content">
                 <h1>Empleados</h1>
                 <h2>Muebleria don Ontiveros</h2>
@@ -28,17 +28,48 @@
         </section>
 
         <section class="contenedor">
-            {% for e in empleado %}  
-                <article class="tarjetas">
-                    <h2>{{ e.nombre }}</h2>
-                    <article class="contenido">
-                        <p>Teléfono: {{ e.telefono }}</p>
-                        <p>Departamento: {{ e.departamento }}</p>
-                        <p>Proyectos: {{ e.proyectos }}</p>
-                        <p>Antigüedad: {{ e.antiguedad }}</p>
-                    </article>
+            <form method="get">
+                <article>
+                    <label for="sucursal">Sucursal</label>
+                    <select name="sucursal" id="sucursal">
+                        <option value="">-- Selecciona una sucursal --</option>
+                        {% for s in sucursales %}
+                            <option value="{{ s.id }}" 
+                                {% if s.id == sucursal_seleccionada %}
+                                    selected
+                                {% endif %}>{{ s.descripcion }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit">Buscar</button>
                 </article>
-            {% endfor %}
+            </form>
+
+            <artcle>
+                {% for s in sucursales %}
+                    {% if s.id == sucursal_seleccionada %}
+                        <h2>{{ s.descripcion }}</h2>
+                    {% endif %}
+                {% endfor %}
+            </artcle>
+
+            <article class="resultados">
+                {% if empleado %}
+                    {% for e in empleado %}
+                        <article class="tarjetas">
+                            <h2>{{ e.departamento }}</h2>
+                            <article class="contenido">
+                                <p><strong>Nombre:</strong> {{ e.nombre }}</p>
+                                <p><strong>Teléfono:</strong> {{ e.telefono }}</p>
+                                <p><strong>Proyectos:</strong> {{ e.proyectos }}</p>
+                                <p><strong>Antigüedad:</strong> {{ e.antiguedad }}</p>
+                            </article>
+                        </article>
+                    {% endfor %}
+                {% else %}
+                    <p>No hay empleados registrados.</p>
+                {% endif %}
+            </article>
         </section>
     </main>
 
