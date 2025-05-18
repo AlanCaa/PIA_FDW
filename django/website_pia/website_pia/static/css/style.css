@@ -280,7 +280,6 @@ header a:hover {
     background: #504B38;
 }
 
-
 .prueba {
     padding: 30px;
     background-color: #EBE5C2;  
@@ -291,3 +290,88 @@ header a:hover {
     align-items: center; 
     justify-content: space-between;
 }
+
+
+/*#boton-form {
+    font-size: 20px;
+}
+*/
+
+.formulario-sucursal {
+    background-color: #B9B28A;
+    border: 1px solid #d6cdb3;
+    border-color: #786c50;
+    padding: 20px;
+    margin: 40px;
+    margin-right: 100px;
+    max-width: 400px;
+    max-height: 200px;
+    align-content: center;
+    place-self: start;
+    order: 1;
+}
+
+.formulario-sucursal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-sucursal label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #504B38;
+}
+
+.formulario-sucursal select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+}
+
+.formulario-sucursal button {
+    padding: 10px 20px;
+    background-color: #504B38;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.formulario-sucursal button:hover {
+    background-color: #786c50;
+}
+
+.nombre-sucursal {
+    text-align: center;
+    margin: 0 30px;
+    align-self: start;
+    order: 3;
+}
+
+.nombre-sucursal h2 {
+    color: #3e3e3e;
+    font-size: 2.2rem;
+    border-bottom: 5px solid #b9b28a;
+    padding-bottom: 5px;
+}
+
+.tarjetas-empleados {
+    margin: 10px;
+    order: 2;
+}
+
+#contenedor-empleados {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+

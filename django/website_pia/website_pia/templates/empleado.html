@@ -27,33 +27,33 @@
             </div>
         </section>
 
-        <section class="contenedor">
-            <form method="get">
-                <article>
-                    <label for="sucursal">Sucursal</label>
+        <section id="contenedor-empleados" class="contenedor">
+            <article class="formulario-sucursal">
+                <form method="get">
+                    <label for="sucursal">Buscar por sucursal:</label>
                     <select name="sucursal" id="sucursal">
                         <option value="">-- Selecciona una sucursal --</option>
                         {% for s in sucursales %}
-                            <option value="{{ s.id }}" 
+                            <option value="{{ s.id }}"
                                 {% if s.id == sucursal_seleccionada %}
                                     selected
                                 {% endif %}>{{ s.descripcion }}
                             </option>
                         {% endfor %}
                     </select>
-                    <button type="submit">Buscar</button>
-                </article>
-            </form>
+                    <button id="boton-form" type="submit">Buscar</button>
+                </form>
+            </article>
 
-            <artcle>
+            <article class="nombre-sucursal">
                 {% for s in sucursales %}
                     {% if s.id == sucursal_seleccionada %}
                         <h2>{{ s.descripcion }}</h2>
                     {% endif %}
                 {% endfor %}
-            </artcle>
+            </article>
 
-            <article class="resultados">
+            <article class="tarjetas-empleados">
                 {% if empleado %}
                     {% for e in empleado %}
                         <article class="tarjetas">
@@ -67,7 +67,9 @@
                         </article>
                     {% endfor %}
                 {% else %}
-                    <p>No hay empleados registrados.</p>
+                        <h2>No hay empleados registrados</h2>
+                        <p>En este momento contamos con vacantes nuestra sucursal.</p>
+                        <p>Dirijete a la sección de contacto para una mejor comunicacion e información</p>
                 {% endif %}
             </article>
         </section>
