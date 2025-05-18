@@ -215,7 +215,7 @@ header a:hover {
     margin-left: 20px;
 }
 
-/*Se usa para la páginqa contacto, 2 bloques separados pero alineados verticalmente*/
+/*Se usa para la página contacto, 2 bloques separados pero alineados verticalmente*/
 .contenedor3 {
     margin: 2% 2%;
     display: grid;
@@ -225,14 +225,31 @@ header a:hover {
     min-height: 100vh;
     padding: 5px 0;
     margin-bottom: 0px;
+    grid-template-rows: auto auto; /* Dos filas son suficientes ahora */
 }
 
 .caja {
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 6px;
     background-color: #EBE5C2;  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#a{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#b{
+    grid-row: 1 / span 2; /* Ocupa dos filas */
+    grid-column: 2;
+    max-height:400px;
+    overflow:auto;
+}
+
+#c{
+    grid-row: 2;
+    grid-column: 1;
 }
 
 .caja.text {
@@ -282,22 +299,10 @@ header a:hover {
     border-radius: 4px;
     font-size: 15px;
     cursor: pointer;
-    
 }
 
 .caja.form form button:hover {
     background: #504B38;
-}
-
-.prueba {
-    padding: 30px;
-    background-color: #EBE5C2;  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    margin: 40px auto; 
-    max-width: 95%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between;
 }
 
 .formulario-sucursal {
@@ -376,5 +381,3 @@ header a:hover {
     gap: 20px;
     padding: 10px;
 }
-
-
