@@ -103,6 +103,14 @@ header a:hover {
     padding: 0 20px;
 }
 
+.sucursales-contenedor {
+    display: flex;
+    flex-direction: column; /* o row si quieres horizontal */
+    align-items: center;
+    margin: 20px auto;
+}
+
+
 /* Se utiliza en productos y sucursales, se da apariencia de tarjetas un pooco cuadradas */
 .tarjetas {
     background-color: #EBE5C2;
@@ -274,6 +282,7 @@ header a:hover {
     border-radius: 4px;
     font-size: 15px;
     cursor: pointer;
+    
 }
 
 .caja.form form button:hover {
@@ -290,12 +299,6 @@ header a:hover {
     align-items: center; 
     justify-content: space-between;
 }
-
-
-/*#boton-form {
-    font-size: 20px;
-}
-*/
 
 .formulario-sucursal {
     background-color: #B9B28A;
